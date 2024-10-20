@@ -1,4 +1,4 @@
-module github.com/gin-csrf-cookie
+module github.com/okoshi-f/gin-csrf-cookie
 
 require (
 	github.com/gin-contrib/sessions v0.0.0-20190101140330-dc5246754963
