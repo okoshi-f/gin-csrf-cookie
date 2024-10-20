@@ -1,6 +1,8 @@
 # gin-csrf-cookie
 This is an implementation of CSRF protection using cookies with gin-csrf.
 
+This library was created using and with reference to https://github.com/utrack/gin-csrf.
+
 # Installation
 
 ```
@@ -26,7 +28,7 @@ func main() {
 	r.Use(csrf.Middleware(csrf.Options{Secret: "secret123"}))
 
 	r.GET("/protected", func(c *gin.Context) {
-    csrf.LoadToken(c, "/", "localhost", false)
+		csrf.LoadToken(c, "/", "localhost", false)
 		c.String(200, "OK")
 	})
 
@@ -37,3 +39,7 @@ func main() {
 	r.Run(":8080")
 }
 ```
+
+# Disclaimer
+
+We make no warranty for any damages caused by the use of this library.
